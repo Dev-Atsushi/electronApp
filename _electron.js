@@ -1,5 +1,9 @@
 const { app, BrowserWindow, remote } = require('electron');
 
+require("electron-reload")(__dirname, {
+  electron: require(`${__dirname}/node_modules/electron`),
+});
+
 app.on('ready', () => {
   let mainWindow = new BrowserWindow({
     width: 900,
